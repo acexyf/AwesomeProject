@@ -32,7 +32,6 @@ export default class App extends Component<Props> {
         <Image source={{
             uri: 'http://pic5.40017.cn/01/000/93/f5/rBLkBVtxLhCAOnvvAAPcsJ-rp1o992_640x360_00.jpg'
         }} style={{width: 193, height: 110}} />
-        <Greeting name="Rexxar" />
         <Text style={styles.welcome}>Welcome Corner to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
