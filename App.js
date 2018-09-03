@@ -7,7 +7,13 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {
+    Platform, 
+    StyleSheet,
+    Text, 
+    View,
+    Image,
+} from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -17,11 +23,17 @@ const instructions = Platform.select({
 });
 
 type Props = {};
+
+
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
+        <Image source={{
+            uri: 'http://pic5.40017.cn/01/000/93/f5/rBLkBVtxLhCAOnvvAAPcsJ-rp1o992_640x360_00.jpg'
+        }} style={{width: 193, height: 110}} />
+        <Greeting name="Rexxar" />
+        <Text style={styles.welcome}>Welcome Corner to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
