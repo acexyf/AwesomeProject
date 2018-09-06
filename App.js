@@ -15,6 +15,21 @@ import {
     Image,
 } from 'react-native';
 
+
+import { YellowBox } from 'react-native';
+
+
+import {
+    createStackNavigator,
+} from 'react-navigation';
+
+import Home from './src/Home';
+import Profile from './src/Profile';
+
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
+
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -25,20 +40,16 @@ const instructions = Platform.select({
 type Props = {};
 
 
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Image source={{
-            uri: 'http://pic5.40017.cn/01/000/93/f5/rBLkBVtxLhCAOnvvAAPcsJ-rp1o992_640x360_00.jpg'
-        }} style={{width: 193, height: 110}} />
-        <Text style={styles.welcome}>Welcome Corner to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
+const RootStack = createStackNavigator({
+    Home: { screen: Home },
+    Profile: { screen: Profile },
+});
+
+export default class App extends React.Component {
+    render() {
+      return <RootStack />;
+    }
   }
-}
 
 const styles = StyleSheet.create({
   container: {
