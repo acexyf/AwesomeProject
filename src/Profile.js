@@ -9,9 +9,13 @@ import {
 } from 'react-native';
 
 export default class Profile extends Component<Props> {
-    static navigationOptions = {
-        title: 'Profile',
+    
+    static navigationOptions = ({navigation}) => {
+        return {
+            title: navigation.getParam('name', 'A Nested Details Screen'),
+        }
     };
+
     render() {
         const {
             goBack,
@@ -35,7 +39,7 @@ export default class Profile extends Component<Props> {
 
 const styles = StyleSheet.create({
     buttons: {
-        margin: 20,
-
+        marginTop: 20,
+        color: 'red'
     }
 })
