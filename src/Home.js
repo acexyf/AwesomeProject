@@ -18,23 +18,32 @@ const styles = StyleSheet.create({
 export default class Home extends Component<Props> {
     static navigationOptions = {
         title: 'Home',
-    };
+    }
+    constructor(props){
+        super(props);
+        this.state = { isLoading: true}
+    }
+    componentDidMount(){
+        // Alert.alert('初始化'+this.state.isLoading)
+    }
     render() {
         const { navigate, push } = this.props.navigation;
       return (
         <View>
             <Text>Welcome Homes!</Text>
-            <Button
+            <View>
+                <Button
+                    onPress={()=>{
+                        push('Profile', { name: 'Jane' })
+                    }}
+                    title="Go Profile" />
+                
+                <Button 
                 onPress={()=>{
-                    push('Profile', { name: 'Jane' })
+                    Alert.alert('Tap click')
                 }}
-                title="Go Profile" />
-            
-            <Button 
-            onPress={()=>{
-                Alert.alert('Tap click')
-            }}
-             style={styles.buttons} title="Click To Alert" />
+                style={styles.buttons} title="Click To Alert" />
+            </View>
 
         </View>
       );
