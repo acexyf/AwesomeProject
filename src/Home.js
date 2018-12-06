@@ -5,8 +5,15 @@ import {
     Text, 
     View,
     Image,
-    Button
+    Button,
+    Alert,
 } from 'react-native';
+
+const styles = StyleSheet.create({
+    buttons: {
+        margin: 20
+    }
+})
 
 export default class Home extends Component<Props> {
     static navigationOptions = {
@@ -22,7 +29,16 @@ export default class Home extends Component<Props> {
                     push('Profile', { name: 'Jane' })
                 }}
                 title="Go Profile" />
+            
+            <Button 
+            onPress={()=>{
+                Alert.alert('Tap click')
+            }}
+             style={styles.buttons} title="Click To Alert" />
+
         </View>
       );
     }
 }
+
+
