@@ -37,7 +37,7 @@ export default class Home extends Component<Props> {
         })
         .then(response => response.json())
         .then(response => {
-            Alert.alert(response.code)
+            Alert.alert('提示',response.code)
         })
     }
 
@@ -63,9 +63,9 @@ export default class Home extends Component<Props> {
                 <View style={styles.buttons}>
                     <Button 
                     onPress={()=>{
-                        Alert.alert('Tap click')
+                        Alert.alert('提示',`this platform is ${Platform.OS},version is ${Platform.Version}`)
                     }}
-                     title="Click To Alert" />
+                     title="Show Platform" />
                  </View>
 
                 <View style={styles.buttons}>
@@ -81,6 +81,14 @@ export default class Home extends Component<Props> {
                         push('SampleAppMovies')
                     }}
                     title="Click To SampleAppMovies" />
+                </View>
+
+                <View style={styles.buttons}>
+                    <Button 
+                    onPress={()=>{
+                        push('Animate')
+                    }}
+                    title="Click To Animate" />
                 </View>
 
             </View>

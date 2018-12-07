@@ -26,6 +26,7 @@ import {
 import Home from './src/Home';
 import Profile from './src/Profile';
 import SampleAppMovies from './src/SampleAppMovies';
+import Animate from './src/Animate';
 
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
@@ -45,6 +46,7 @@ const RootStack = createStackNavigator({
     Home: { screen: Home },
     Profile: { screen: Profile },
     SampleAppMovies: { screen: SampleAppMovies },
+    Animate: { screen: Animate },
 });
 
 export default class App extends React.Component {
