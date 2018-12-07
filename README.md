@@ -28,3 +28,10 @@ adb -s 1dd5a09 push D://img/my.png /sdcard/
 # 启动服务
 
 npm run dev-android
+
+
+
+# 远程连接调试
+
+Dev Settings => Debug server host & port for devices => [ip]:8081
+
