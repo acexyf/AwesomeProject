@@ -29,7 +29,7 @@ export default class Home extends Component<Props> {
 
     _onPressFetch(){
 
-        fetch('https://www.aigobo.cn/api/cooperateCompanyList',{
+        fetch('https://www.baidu.com/home/msg/data/personalcontent?num=8&indextype=manht&_req_seqid=0xb488f6860006b7be&asyn=1&t=1544664517265&sid=1468_21082_28019_26350_27750',{
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/x-www-form-urlencoded"
