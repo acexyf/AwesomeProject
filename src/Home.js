@@ -91,6 +91,14 @@ export default class Home extends Component<Props> {
                     title="Click To Animate" />
                 </View>
 
+                <View style={styles.buttons}>
+                    <Button 
+                    onPress={()=>{
+                        push('PersonList')
+                    }}
+                    title="Click To PersonList" />
+                </View>
+
             </View>
 
         </View>
