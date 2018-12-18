@@ -14,6 +14,7 @@ import { red } from 'ansi-colors';
 export default class Home extends Component<Props> {
     static navigationOptions = {
         title: 'Home',
+
     }
     constructor(props){
         super(props);
@@ -24,6 +25,11 @@ export default class Home extends Component<Props> {
     }
     componentDidMount(){
         // Alert.alert(fetch)
+
+        const { addListener } = this.props.navigation
+        addListener('willBlur', (payload)=>{
+            // Alert.alert('tip','willBlur')
+        })
 
     }
 

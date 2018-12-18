@@ -50,7 +50,11 @@ const RootStack = createStackNavigator({
     SampleAppMovies: { screen: SampleAppMovies },
     Animate: { screen: Animate },
     PersonList: { screen: PersonList },
-    TicketList: { screen: TicketList },
+    TicketList: { 
+        screen: TicketList,
+    }
+},{
+    // headerMode: 'none',
 });
 
 export default class App extends React.Component {

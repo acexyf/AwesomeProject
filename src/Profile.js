@@ -13,6 +13,10 @@ export default class Profile extends Component<Props> {
     static navigationOptions = ({navigation}) => {
         return {
             title: navigation.getParam('name', 'A Nested Details Screen'),
+            headerStyle: {
+                backgroundColor: '#f4511e'
+            },
+            headerTintColor: '#fff',
         }
     };
 
