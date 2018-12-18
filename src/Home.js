@@ -99,6 +99,14 @@ export default class Home extends Component<Props> {
                     title="Click To PersonList" />
                 </View>
 
+                <View style={styles.buttons}>
+                    <Button 
+                    onPress={()=>{
+                        push('TicketList')
+                    }}
+                    title="Click To TicketList" />
+                </View>
+
             </View>
 
         </View>
