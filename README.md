@@ -31,6 +31,10 @@ adb tcpid 5555
 9. 远程连接到手机
 adb connect 192.168.31.196:5555
 
+
+10. 对屏幕发送一个触摸事件
+adb shell input tap 500 500
+
 # 启动服务
 
 npm run dev-android
