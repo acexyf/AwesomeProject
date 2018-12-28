@@ -35,6 +35,12 @@ adb connect 192.168.31.196:5555
 10. 对屏幕发送一个触摸事件
 adb shell input tap 500 500
 
+11. home按键
+adb shell input keyevent 3
+
+12. 返回按键
+adb shell input keyevent 4
+
 # 启动服务
 
 npm run dev-android
