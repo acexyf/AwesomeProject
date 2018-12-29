@@ -26,7 +26,7 @@ adb -s 1dd5a09 push D://img/my.png /sdcard/
 
 
 8. 重启手机上的adbd，开启网络调试功能
-adb tcpid 5555
+adb tcpip 5555
 
 9. 远程连接到手机
 adb connect 192.168.31.196:5555
